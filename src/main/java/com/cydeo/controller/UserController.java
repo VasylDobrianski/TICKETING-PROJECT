@@ -42,4 +42,8 @@ public class UserController {
         return "redirect:/user/create";
     }
 
+    public String editUser(){
+
+    }
+
 }
