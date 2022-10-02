@@ -46,7 +46,7 @@ public class UserController {
 
         model.addAttribute("roles",roleService.findAll());
 
-        model.addAttribute("users",userService.findAll());
+        model.addAttribute("userList",userService.findAll());
 
         return "/user/update";
     }
