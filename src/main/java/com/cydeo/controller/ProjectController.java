@@ -84,7 +84,7 @@ public class ProjectController {
 
         List<ProjectDTO> projects = projectService.getCountedListOfProjectDTO(manager);
 
-        model.addAttribute("project",projects);
+        model.addAttribute("projects",projects);
 
         return "/manager/project-status";
     }
