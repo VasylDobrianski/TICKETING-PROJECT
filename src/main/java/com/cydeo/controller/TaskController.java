@@ -57,7 +57,7 @@ public class TaskController {
     public String editTask(@PathVariable("taskId") Long taskId, Model model){
 
         model.addAttribute("task",taskService.findById(taskId));
-        model.addAttribute("project",projectService.findAll());
+        model.addAttribute("projects",projectService.findAll());
         model.addAttribute("employees",userService.findEmployees());
         model.addAttribute("tasks",taskService.findAll());
 
