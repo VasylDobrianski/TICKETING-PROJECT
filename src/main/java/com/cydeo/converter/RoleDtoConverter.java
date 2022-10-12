@@ -12,13 +12,19 @@ public class RoleDtoConverter implements Converter<String, RoleDTO> {
 
     RoleService roleService;
 
-    public RoleDtoConverter (RoleService roleService){
+    public RoleDtoConverter(RoleService roleService) {
         this.roleService = roleService;
     }
 
     @Override
     public RoleDTO convert(String source) {
+
+        if (source == null || source.equals("")) {  //  Select  -> ""
+            return null;
+        }
+
         return roleService.findById(Long.parseLong(source));
+
     }
 
 }
